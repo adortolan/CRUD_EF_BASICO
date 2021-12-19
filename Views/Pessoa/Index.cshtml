@@ -1,0 +1,25 @@
+@model IEnumerable<CRUD_EFCS.Models.Pessoa>
+
+<h2>Todas as pessoas</h2> 
+
+<a href="/Pessoa/Cadastrar" class="btn btn-success">Nova Pessoa</a> 
+
+<hr> 
+
+@foreach(var pessoa in Model) 
+
+{ 
+
+    <p>Nome: @pessoa.Nome</p> 
+
+    <p>SobreNome: @pessoa.SobreNome</p> 
+
+    <p>Idade: @pessoa.Idade</p> 
+
+    <a href="/Pessoa/Editar/@pessoa.Id" class="btn btn-success">Editar</a> 
+
+    <a href="/Pessoa/Deletar/@pessoa.Id" class="btn btn-danger">Deletar</a> 
+
+    <hr> 
+
+} 
